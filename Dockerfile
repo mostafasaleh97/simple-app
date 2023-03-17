@@ -1,5 +1,4 @@
-FROM python:3.6
-MAINTAINER Shivam Mitra "shivamm389@gmail.com" # Change the name and email address
+FROM python:3.8.2-alpine
 COPY app.py test.py /app/
 WORKDIR /app
 RUN pip install flask pytest flake8 # This downloads all the dependencies
