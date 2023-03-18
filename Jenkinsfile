@@ -9,8 +9,6 @@ pipeline {
                         ]
                         def scannerHome = tool 'sonar_tool'
                         withSonarQubeEnv("sonarqube-iti") {
-                            sh "sed -i s#{{repo_name}}#${GIT_REPO_NAME}# sonar-project.properties"
-                            sh "sed -i s#{{branch_name}}#${SONAR_BRANCH_NAME}# sonar-project.properties"
                             sh "${scannerHome}/bin/sonar-scanner \
                                 -Dsonar.projectKey=simple-app \
                                 -Dsonar.sources=src "
