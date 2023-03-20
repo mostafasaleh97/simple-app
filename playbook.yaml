@@ -5,6 +5,6 @@
 
   tasks:
   - name: run simple app
-    ansible.builtin.command: python3 ./src/app.py
+    ansible.builtin.command: python3 src/app.py
       
     
