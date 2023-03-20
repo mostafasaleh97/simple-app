@@ -41,6 +41,7 @@ pipeline {
             steps {
             
                    sh """
+                        chmod 400 test.pem
                         ansible-playbook playbook.yaml
                     """
             
