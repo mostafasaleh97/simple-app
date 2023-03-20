@@ -23,20 +23,20 @@ pipeline {
         //             }
         //         }
         // }
-        stage('build') {
-            steps {
-                    withCredentials([usernamePassword(credentialsId: 'mostafa', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-                        sh """
-                            docker login -u $USERNAME -p $PASSWORD
-                            docker build -t mostafa001/simple-app .
-                            docker push mostafa001/simple-app
+        // stage('build') {
+        //     steps {
+        //             withCredentials([usernamePassword(credentialsId: 'mostafa', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+        //                 sh """
+        //                     docker login -u $USERNAME -p $PASSWORD
+        //                     docker build -t mostafa001/simple-app .
+        //                     docker push mostafa001/simple-app
         
-                        """
-                    }
+        //                 """
+        //             }
                     
                 
-            }
-        }
+        //     }
+        // }
         stage('deploy') {
             steps {
             
