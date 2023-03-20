@@ -1,0 +1,11 @@
+- name: myplaybook
+  hosts: all
+  remote_user: ubuntu
+  gather_facts: false
+
+  tasks:
+  - name: run simple app
+    command:
+      - pip3 install flask
+      - python3 ./src/app.py
+    
