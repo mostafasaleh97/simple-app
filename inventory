@@ -1,4 +1,3 @@
-34.133.81.125
-ansible_connection=ssh
-ansible_user=mostafa
-ansible_ssh_pass=123
+34.133.81.125 ansible_connection=ssh ansible_user=mostafa ansible_ssh_pass=123
+
+
